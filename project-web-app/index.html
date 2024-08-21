@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lyrics</title>
+
+    <!-- Css file  -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="images/favicons.png" />
+  </head>
+  <body>
+    <main class="table" id="customers_table">
+        <!-- Top Nav Bar -->
+      <section class="table__header">
+        <h1>Lyrics Database</h1>
+        <div class="input-group">
+          <input type="search" placeholder="Search Lyrics by Title..." />
+          <img src="images/search.png" alt="" />
+        </div>
+      </section>
+      <!-- Table Data -->
+      <section class="table__body">
+        <table>
+          <caption hidden="true">
+            Lyrics Database
+          </caption>
+          <thead>
+            <tr>
+              <th>Id <span class="icon-arrow">&UpArrow;</span></th>
+              <th>Song Title <span class="icon-arrow">&UpArrow;</span></th>
+              <th>Song Artist <span class="icon-arrow">&UpArrow;</span></th>
+              <th>Song Lyrics</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+      <!-- Displayed while fetching data -->
+      <section class="text_body">
+        <p id="loading-message">Retrieving Data...</p>
+      </section>
+      <!-- Lyrics Dialog -->
+      <dialog id="dialog">
+        <h2>Lyrics Title</h2>
+        <p>Lyrics</p>
+        <button onclick="window.dialog.close();" aria-label="close" class="x">
+          ❌
+        </button>
+      </dialog>
+    </main>
+    <!-- JS Scripts-->
+    <script src="script.js"></script>
+  </body>
+</html>
